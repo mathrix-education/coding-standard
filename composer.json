@@ -28,7 +28,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Mathrix\\CodingStandard\\": "src"
+      "Mathrix\\CodingStandard\\": "src/Mathrix"
     }
   },
   "require": {
