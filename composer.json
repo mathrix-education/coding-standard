@@ -1,0 +1,41 @@
+{
+  "name": "mathrix/coding-standard",
+  "description": "The official Mathrix PHP_CodeSniffer coding standard.",
+  "version": "0.9.0",
+  "type": "phpcodesniffer-standard",
+  "keywords": [
+    "mathrix",
+    "coding",
+    "standard",
+    "style",
+    "phpcs",
+    "rules",
+    "sniffs"
+  ],
+  "homepage": "https://github.com/mathrix-education/coding-standard",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mathieu Bour",
+      "email": "mathieu.tin.bour@gmail.com"
+    }
+  ],
+  "support": {
+    "email": "mathieu@mathrix.fr",
+    "issues": "https://github.com/mathrix-education/coding-standard/issues",
+    "wiki": "https://github.com/mathrix-education/coding-standard/wiki",
+    "source": "https://github.com/mathrix-education/coding-standard"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mathrix\\CodingStandard\\": "src"
+    }
+  },
+  "require": {
+    "php": "^7.2",
+    "doctrine/coding-standard": "^6.0"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
