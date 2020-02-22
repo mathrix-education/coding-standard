@@ -14,6 +14,35 @@
         <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration"/>
     </rule>
 
+    <!-- Require specific order of phpDoc annotations with empty newline between specific groups -->
+    <rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing">
+        <properties>
+            <property name="linesCountBeforeFirstContent" value="0"/>
+            <property name="linesCountAfterLastContent" value="0"/>
+            <property name="linesCountBetweenDescriptionAndAnnotations" value="1"/>
+            <property name="linesCountBetweenAnnotationsGroups" value="1"/>
+            <property name="annotationsGroups" type="array">
+                <element value="
+                    @internal,
+                    @deprecated,
+                "/>
+                <element value="
+                    @testdox,
+                    @coversDefaultClass,
+                    @covers,
+                    @uses,
+                "/>
+                <element value="@param"/>
+                <element value="@return"/>
+                <element value="@throws"/>
+                <element value="
+                    @link,
+                    @see,
+                "/>
+            </property>
+        </properties>
+    </rule>
+
     <!-- Force no whitespace after a type cast -->
     <rule ref="Generic.Formatting.NoSpaceAfterCast"/>
 
