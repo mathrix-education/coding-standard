@@ -11,7 +11,6 @@
         <exclude name="Generic.Formatting.SpaceAfterCast"/>
         <exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar"/>
         <exclude name="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly"/>
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration"/>
     </rule>
 
     <!-- Require specific order of phpDoc annotations with empty newline between specific groups -->
