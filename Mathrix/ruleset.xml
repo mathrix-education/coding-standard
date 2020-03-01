@@ -448,19 +448,34 @@
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
         <properties>
             <property name="enableObjectTypeHint" value="true"/>
-            <property name="traversableTypeHints" value="true"/>
+            <property name="traversableTypeHints" type="array">
+                <element value="\Braintree\Collection"/>
+                <element value="\Illuminate\Database\Eloquent\Collection"/>
+                <element value="\Illuminate\Support\Collection"/>
+                <element value="\Stripe\Collection"/>
+            </property>
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
         <properties>
             <property name="enableNativeTypeHint" value="true"/>
-            <property name="traversableTypeHints" value="true"/>
+            <property name="traversableTypeHints" type="array">
+                <element value="\Braintree\Collection"/>
+                <element value="\Illuminate\Database\Eloquent\Collection"/>
+                <element value="\Illuminate\Support\Collection"/>
+                <element value="\Stripe\Collection"/>
+            </property>
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint">
         <properties>
             <property name="enableNativeTypeHint" value="true"/>
-            <property name="traversableTypeHints" value="true"/>
+            <property name="traversableTypeHints" type="array">
+                <element value="\Braintree\Collection"/>
+                <element value="\Illuminate\Database\Eloquent\Collection"/>
+                <element value="\Illuminate\Support\Collection"/>
+                <element value="\Stripe\Collection"/>
+            </property>
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint"/>
