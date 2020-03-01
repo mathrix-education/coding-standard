@@ -615,18 +615,18 @@
     <rule ref="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing">
         <properties>
             <property name="linesCountBeforeControlStructure" value="1"/>
-            <property name="linesCountBeforeFirstControlStructure" value="0"/>
+            <property name="linesCountBeforeFirstControlStructure" value="1"/>
             <property name="linesCountAfterControlStructure" value="1"/>
-            <property name="linesCountAfterLastControlStructure" value="0"/>
+            <property name="linesCountAfterLastControlStructure" value="1"/>
         </properties>
     </rule>
-    <rule ref="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing">
+    <rule ref="SlevomatCodingStandard.ControlStructures.JumpStatementsSpacing">
         <properties>
             <property name="allowSingleLineYieldStacking" value="true"/>
             <property name="linesCountBeforeControlStructure" value="1"/>
-            <property name="linesCountBeforeFirstControlStructure" value="0"/>
+            <property name="linesCountBeforeFirstControlStructure" value="1"/>
             <property name="linesCountAfterControlStructure" value="1"/>
-            <property name="linesCountAfterLastControlStructure" value="0"/>
+            <property name="linesCountAfterLastControlStructure" value="1"/>
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.ControlStructures.NewWithParentheses"/>
