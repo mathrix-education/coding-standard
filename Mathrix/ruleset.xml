@@ -496,9 +496,21 @@
                 <element value="protected constants"/>
                 <element value="private constants"/>
                 <element value="public properties, protected properties, private properties"/>
+                <element value="public static properties, protected static properties, private static properties"/>
                 <element value="constructor"/>
-                <element value="public methods, protected methods, private methods"/>
+                <element value="public static abstract methods,
+                                protected static abstract methods,
+                                public static methods,
+                                protected static methods,
+                                private static methods"/>
+                <element value="public abstract methods,
+                                protected abstract methods,
+                                public methods,
+                                protected methods,
+                                private methods"/>
                 <element value="magic methods"/>
+                <element value="static constructors"/>
+                <element value="destructor"/>
             </property>
         </properties>
     </rule>
@@ -515,7 +527,7 @@
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.Functions.StaticClosure"/>
-<!--    <rule ref="SlevomatCodingStandard.PHP.DisallowDirectMagicInvokeCall"/>-->
+    <!--    <rule ref="SlevomatCodingStandard.PHP.DisallowDirectMagicInvokeCall"/>-->
     <rule ref="SlevomatCodingStandard.Operators.DisallowEqualOperators"/>
     <rule ref="SlevomatCodingStandard.Operators.RequireCombinedAssignmentOperator"/>
     <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements"/>
@@ -532,7 +544,7 @@
     </rule>
     <rule ref="SlevomatCodingStandard.PHP.OptimizedFunctionsWithoutUnpacking"/>
     <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon"/>
-<!--    <rule ref="SlevomatCodingStandard.Variables.DisallowSuperGlobalVariable"/>-->
+    <!--    <rule ref="SlevomatCodingStandard.Variables.DisallowSuperGlobalVariable"/>-->
     <rule ref="SlevomatCodingStandard.Variables.DuplicateAssignmentToVariable"/>
     <rule ref="SlevomatCodingStandard.Variables.UnusedVariable">
         <properties>
@@ -561,8 +573,8 @@
             <property name="maxLinesCountBeforeWithoutComment" value="0"/>
         </properties>
     </rule>
-<!--    <rule ref="SlevomatCodingStandard.Classes.DisallowMultiConstantDefinition"/>-->
-<!--    <rule ref="SlevomatCodingStandard.Classes.DisallowMultiPropertyDefinition"/>-->
+    <!--    <rule ref="SlevomatCodingStandard.Classes.DisallowMultiConstantDefinition"/>-->
+    <!--    <rule ref="SlevomatCodingStandard.Classes.DisallowMultiPropertyDefinition"/>-->
     <rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference"/>
     <rule ref="SlevomatCodingStandard.Classes.PropertySpacing">
         <properties>

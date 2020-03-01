@@ -5,6 +5,7 @@ on:
 jobs:
   integrity:
     name: Check integrity
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
