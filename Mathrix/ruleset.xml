@@ -689,7 +689,7 @@
     </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
         <properties>
-            <property name="spacesCountBeforeColon" value="1"/>
+            <property name="spacesCountBeforeColon" value="0"/>
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue"/>
