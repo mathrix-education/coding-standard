@@ -3,14 +3,14 @@ on:
   push:
     branches: ['**'] # Do not run on tags
 jobs:
-  integrity:
-    name: Check integrity
+  lint:
+    name: Lint with PHP_CodeSniffer
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup PHP
-        uses: shivammathur/setup-php@2.1.0
+        uses: shivammathur/setup-php@2.1.3
         with:
           php-version: 7.4
           tools: prestissimo
@@ -18,4 +18,20 @@ jobs:
       - name: Install dependencies
         run: composer install --no-progress --no-suggest --prefer-dist
       - name: Run PHP_CodeSniffer
-        run: vendor/bin/phpcs --standard=Mathrix tests/dummy.php
+        run: vendor/bin/phpcs
+  tests:
+    name: Test with PHPUnit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup PHP
+        uses: shivammathur/setup-php@2.1.3
+        with:
+          php-version: 7.4
+          tools: prestissimo
+          coverage: none
+      - name: Install dependencies
+        run: composer install --no-progress --no-suggest --prefer-dist
+      - name: Run PHPUnit
+        run: vendor/bin/phpunit --testdox

@@ -1,7 +1,7 @@
 {
   "name": "mathrix-education/coding-standard",
   "description": "The official Mathrix PHP_CodeSniffer coding standard.",
-  "version": "2.0.0-alpha.3",
+  "version": "2.0.0",
   "type": "phpcodesniffer-standard",
   "keywords": [
     "mathrix",
@@ -32,7 +32,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Mathrix\\CodingStandard\\": "Mathrix/"
+      "Mathrix\\Standard\\": "Mathrix/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Mathrix\\Standard\\Tests\\": "tests"
     }
   },
   "require": {

@@ -1,13 +1,28 @@
 <?php
+
 declare(strict_types=1);
 
-use PHPUnit\Framework\TestCase;
+namespace Mathrix\Standard\Tests;
 
-class IntegrityTest extends TestCase
+use PHPUnit\Framework\TestCase;
+use function dirname;
+use function file_get_contents;
+use function preg_match_all;
+use function preg_quote;
+use function shell_exec;
+use function sort;
+use function strpos;
+
+class RulesInclusionTest extends TestCase
 {
     private const STANDARDS = ['PSR12', 'SlevomatCodingStandard'];
+
+    /** @var string The standard content. */
     private string $standard = '';
 
+    /**
+     * @return string[][] The rules dataset.
+     */
     public function createRulesDataset(): array
     {
         $phpcs = dirname(__DIR__) . '/vendor/bin/phpcs';
@@ -23,6 +38,8 @@ class IntegrityTest extends TestCase
             }
         }
 
+        sort($rules);
+
         $dataset = [];
 
         foreach ($rules as $rule) {
@@ -33,6 +50,7 @@ class IntegrityTest extends TestCase
     }
 
     /**
+     * @testdox sees the rule $rule in the standard
      * @dataProvider createRulesDataset
      *
      * @param string $rule The rule to check.
