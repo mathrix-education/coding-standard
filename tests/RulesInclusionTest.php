@@ -50,8 +50,8 @@ class RulesInclusionTest extends TestCase
     }
 
     /**
-     * @testdox sees the rule $rule in the standard
      * @dataProvider createRulesDataset
+     * @testdox      sees the rule $rule in the standard
      *
      * @param string $rule The rule to check.
      */
