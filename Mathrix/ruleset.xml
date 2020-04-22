@@ -504,6 +504,16 @@
     </properties>
   </rule>
 
+  <!--
+  Reference: https://github.com/slevomat/coding-standard#slevomatcodingstandardclassesclassmemberspacing-
+  -->
+  <rule ref="SlevomatCodingStandard.Classes.ClassMemberSpacing">
+    <properties>
+      <property name="linesCountBetweenMembers" value="1"/>
+    </properties>
+  </rule>
+
+
   <!-- Disabled because we really like this feature -->
   <!--<rule ref="SlevomatCodingStandard.Classes.DisallowLateStaticBindingForConstants"/>-->
 
@@ -546,9 +556,9 @@
   <rule ref="SlevomatCodingStandard.Classes.PropertySpacing">
     <properties>
       <property name="minLinesCountBeforeWithComment" value="0"/>
-      <property name="maxLinesCountBeforeWithComment" value="0"/>
+      <property name="maxLinesCountBeforeWithComment" value="1"/>
       <property name="minLinesCountBeforeWithoutComment" value="0"/>
-      <property name="maxLinesCountBeforeWithoutComment" value="0"/>
+      <property name="maxLinesCountBeforeWithoutComment" value="1"/>
     </properties>
   </rule>
 
@@ -878,6 +888,12 @@
   <rule ref="SlevomatCodingStandard.Functions.StaticClosure"/>
 
   <!--
+  Reference: https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsstrictcall
+  This is never a bad idea to ensure strict calls
+  -->
+  <rule ref="SlevomatCodingStandard.Functions.StrictCall"/>
+
+  <!--
   Reference: https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsrequirearrowfunction-
   Disabled because we want to keep the control over where we declare arrow functions.
   -->
@@ -1048,6 +1064,12 @@
   Disabled because we may need to use references.
   -->
   <!--<rule ref="SlevomatCodingStandard.PHP.DisallowReference"/>-->
+
+  <!--
+  Reference: https://github.com/slevomat/coding-standard#slevomatcodingstandardphpforbiddenclasses-
+  Disabled because we basically have no idea of which classes to forbid.
+  -->
+  <rule ref="SlevomatCodingStandard.PHP.ForbiddenClasses"/>
 
   <rule ref="SlevomatCodingStandard.PHP.OptimizedFunctionsWithoutUnpacking"/>
 
